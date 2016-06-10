@@ -1,0 +1,21 @@
+MVC模式：
+	Model    模型：封装应用程序的数据和业务逻辑(pojo(plain old java object))
+	View     视图：实现应用程序的信息显示功能(jsp)
+	Control  控制器：接受来自用户的输入，调用模型层，响应对应的视图组件（Servlet>filter）
+Control控制器
+	Servlet起到控制器的作用
+	Servlet起到控制器作用的原理：
+		1.获取请求数据封装【BeanUtils可以优化，但用方法】
+		2.调用Service处理业务逻辑
+		3.跳转（转发/重定向）【跳转的代码写死】
+		
+传统MVC开发总结
+	1.跳转的代码写死，不灵活
+	2.Servlet每次都要去写，且在web.xml中配置
+		（配置的目的：找到请求的service处理类）
+	
+
+
+需求：登录、注册
+	登陆成功>首页
+	注册成功>登录或者首页
